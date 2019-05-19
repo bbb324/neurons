@@ -1,0 +1,30 @@
+@import '../../nodeColor';
+.node-actual.node-type-MOTORS {
+  .node-body{
+    border: 3px solid @node-motors;
+    height: 101px;
+    width: 165px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-motors;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-motors;
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-MOTORS {
+    .node-body {
+      height: 60px;
+      width: 96px;
+      border-width: 2px;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import '../../../nodeColor';
+@import '../../../nodeShape';
+.node-actual.node-type-SERVOANGLE {
+  width: 96px;
+  height: 96px;
+  background-color: @node-servoAngle;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;   
+  .node-body{
+    border: solid 1px @node-servoAngle-borderColor;
+    width: 96px;
+    height: 96px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    .servo-angle {
+      display: block;
+      height:19px;
+      text-align: center;
+      widows: inherit;
+      line-height: 17px;
+      font-size: 12px;
+    }
+    .port-value{
+      width: 92px;
+      height: 67px;
+      border-radius: 6px;
+      background-color: #2b313c;
+      .port1{
+          width: 42px;
+          height: 20px;
+          opacity: 0.94;
+          font-size: 14px;
+          color: #a5b2c8; 
+          display: block;
+          position: relative;
+          top: 8px;
+          margin: 0 auto;             
+      }
+     .line {
+        width: 70px;
+        height: 2px;
+        border: solid 1px #353c48;
+        display: block;
+        position: relative;
+        top: 12px;
+        margin: 0 auto;       
+      }     
+      .port2{
+          width: 42px;
+          height: 20px;
+          opacity: 0.94;
+          font-size: 14px;
+          color: #a5b2c8;      
+          display: block;
+          position: relative;
+          top: 20px;
+          margin: 0 auto;       
+      }      
+    }
+  }  
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-servoAngle;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      width: 36px;
+      height: 18px;  
+      background-color: @node-servoAngle;
+      border: solid 1px @node-servoAngle-borderColor;  
+      border-radius: 9px;
+      line-height: 18px;
+      color: #FFF;
+      font-size: 10px;
+      top: 26px;
+      .node-port-value{
+        text-align: center;
+      }
+    }
+  }
+  .node-port-outputs {
+    .core {
+      .node-output-port-stying-object-style(@node-servoAngle);
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-SERVOANGLE{
+    transform: scale(0.64) !important;
+    .node-port-output .core{
+      width: 16px !important;
+      height: 16px !important;
+      .node-port-value{
+        width: 10px !important;
+        height: 10px !important;
+      }
+    }
+
+  }
+}
+

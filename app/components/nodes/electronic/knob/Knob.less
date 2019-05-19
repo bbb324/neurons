@@ -1,0 +1,35 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+
+.node-actual.node-type-KNOB {
+  .node-body{
+    border: 3px solid @node-knob;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-knob;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      .node-output-port-number-style(@node-knob);
+    }
+
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-KNOB {
+    .node-body {
+      border-width: 2px;
+    }
+    .node-port-outputs{
+      .core{
+        width: 100%;
+      }
+    }
+  }
+}

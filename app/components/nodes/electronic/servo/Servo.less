@@ -1,0 +1,31 @@
+@import '../../nodeColor';
+.node-actual.node-type-SERVO {
+  .node-body{
+    border: 3px solid @node-servo;
+    height: 101px;
+    width: 165px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-servo;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-servo;
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-SERVO {
+    .node-body {
+      height: 60px;
+      width: 96px;
+      border-width: 2px;
+    }
+  }
+}
+

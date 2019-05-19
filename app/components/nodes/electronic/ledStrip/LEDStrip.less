@@ -1,0 +1,34 @@
+@import '../../nodeColor';
+
+.node-actual.node-type-LEDSTRIP {
+  .node-body{
+    border: 3px solid @node-ledstrip;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-ledstrip;
+    }
+  }
+  .node-config {
+    width: 200px;
+    height: 152px;
+    .title {
+      display: none;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-ledstrip;
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-LEDSTRIP {
+    .node-body {
+      border-width: 2px;
+    }
+  }
+}

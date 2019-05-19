@@ -1,0 +1,302 @@
+@import '../../nodes/nodeShape';
+.ReactModal__Content.ReactModal__Content--after-open.pattern-dialog{
+  height: 482px;
+  width: 602px;
+  background: #2B323E;
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
+  outline: none;
+  padding: 0;
+  .dialog-color-list{
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 26px;
+    ul{
+      width: 504px;
+      margin: 0 auto;
+    }
+    .colorBlock{
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin: 0 9px;
+      border-radius: 100%;
+    }
+    .colorBlock:nth-child(2){
+      margin: 0 9px 0 0;
+    }
+    .right{
+      float: right;
+      margin: 0 0 0 9px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 21px;
+    }
+    .icon-selected:before{
+      font-size: 22px;
+      content: "\e939";
+      display: table;
+      margin: 0 auto;
+      border-radius: 100%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+    }
+    .icon-eraser:before{
+      content: "\e924" !important;
+    }
+  }  
+  .mode-dialog-select {
+    width: 439px;
+    height: 58px;
+    line-height: 58px;
+    margin-left: 55px;
+    margin-top: -3px;
+    i {
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      right: 10px;
+      top: 12px;
+    }
+    .mode-dialog-select-options {
+      color: #5B687B;
+      background: #1D222A;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      padding-left: 8px;
+      font-size: 16px;
+      text-align: center;
+      li{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 60px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        margin: 8px 2px;
+        &:last-child{
+          border-right: none;
+        }
+      }
+      .selected-option{
+        background: #323A47;
+        border: none;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        color: #9DB0CE;
+      }
+      .icon-ok-2:after{
+        margin-left: 6px;
+      }
+    }
+  }
+
+  .title, .color-dialog-footer {
+    margin-top: 26px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    color: #BFCEE5;
+    font-size: 28px;
+  }
+
+  .pattern-dialog-body {
+    transition: transform 0.5s ease;
+    -webkit-border-bottom-left-radius: 16px;
+    -webkit-border-bottom-right-radius: 16px;
+
+    &.spring {
+      transform: translateY(-100px);
+      -webkit-transform: translateY(-100px);
+      -webkit-border-radius: 16px;
+    }
+  }
+
+  .color-dialog-footer {
+    .color-dialog-btn {
+      background: #353C48;
+      color: #9CAFCE;
+      float: right;
+      height: 77px;
+      font-size: 28px;
+      line-height: 77px;
+      padding: 0 20px;
+      text-align: center;
+      width: 50%;
+      display: inline-block;
+      i {
+        float: left;
+        line-height: 46px;
+      }
+    }
+    .color-dialog-cancel {
+      border-bottom-left-radius: 16px;
+    }
+    .color-dialog-confirm {
+      border-bottom-right-radius: 16px;
+      border-left: 1px solid #2B323E;
+      color: #13B7FF;
+    }
+    .color-dialog-cancel:active{
+      color: rgba(156, 175, 206, 0.6);
+    }
+    .color-dialog-confirm:active{
+      color: rgba(19, 183, 255, 0.6);
+    }
+  }
+  .title{
+    margin-top: 0;
+    background: #353C48;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    .title-txt{
+      line-height: 31px;
+      color: #BFCEE5;
+    }
+    .icon-delete:before{
+      color: #ffffff;
+    }
+  }
+  .color-list{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 26px;
+    ul{
+      width: 504px;
+    }
+  }
+  .colorBlock{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 9px;
+    border-radius: 100%;
+  }
+  .colorBlock:nth-child(2){
+    margin: 0 9px 0 0;
+  }
+  .right{
+    float: right;
+    margin: 0 0 0 9px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 21px;
+  }
+  .icon-selected:before{
+    font-size: 22px;
+    content: "\e939";
+    display: table;
+    margin: 0 auto;
+    border-radius: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+  }
+  .icon-eraser:before{
+    content: "\e924" !important;
+  }
+  .hide{
+    display: none;
+  }
+  .ledSet{
+    display: inline-block;
+    background: #212731;
+    height: 158px;
+    margin: 26px 0 0 55px;
+    border-radius: 5px 5px 0 0;
+    .light{
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      border-radius: 100%;
+      margin: 0 3px;
+      background: #fff;
+      line-height: 50px;
+      text-align: center;
+      .selectLed{
+        position: relative;
+        display: block;
+        width: 54px;
+        height: 54px;
+        border: none;
+        top: -3px;
+        left: -3px;
+        right: 0;
+        bottom: 0;
+        border-radius: 100%;
+      }
+    }
+    .light:nth-child(1){
+      margin: 0 3px 0 10px;
+    }
+    .light:nth-child(9){
+      margin: 7px 22px 0 3px;
+    }
+    .light:nth-child(15){
+      margin: 7px 3px 0 0;
+    }
+
+    .mid{
+      position: absolute;
+      top: 27px;
+      right: -27px;
+    }
+    .addLed{
+      display: inline-block;
+      font-size: 24px;
+      color: #71d7dc;
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      margin-left: 5px;
+      background: none;
+      border: 1px dashed #70cace;
+    }
+
+    .ledList{
+      display: inline-block;
+      float: left;
+      width: 401px;
+      position: relative;
+      margin: 35px 38px 21px 0;
+    }
+    .icon-add:before{
+      position: relative;
+      float: left;
+      left: 12px;
+      line-height: 50px;
+    }
+    .hide{
+      display: none;
+    }
+    .right{
+      margin:7px 3px 0 3px;
+    }
+  }
+  .pattern-dialog-actions {
+      width: 60px;
+      float: right;
+      margin: 26px 43px 0 0;
+      .pattern-dialog-undo, .pattern-dialog-redo, .pattern-dialog-delete {
+        &:active {
+          color: #FFFFFF;
+          background: #3A4352;
+        }
+        border: 2px solid #3A4352;
+        border-radius: 6px;
+        height: 60px;
+        width: 60px;
+        display: block;
+        margin-bottom: 10px;
+        line-height: 60px;
+        text-align: center;
+        font-size: 24px;
+        color: #9CAFCE;
+      }
+    }
+}

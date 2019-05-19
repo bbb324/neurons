@@ -1,0 +1,30 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-actual.node-type-LIGHTSENSOR {
+  .node-body{
+    border: 3px solid @node-lightSensor;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-lightSensor;
+    }
+  }
+
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      .node-output-port-number-style(@node-lightSensor);
+    }
+
+  }  
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-LIGHTSENSOR {
+    .node-body {
+      border-width: 2px;
+    }
+  }
+}

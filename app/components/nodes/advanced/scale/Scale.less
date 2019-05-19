@@ -1,0 +1,75 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+
+.node-actual.node-type-SCALE {
+  color:#fff;
+  background: @node-scale;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  .node-body{
+    border: solid 1px @node-scale-borderColor;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    .node-actual-body {
+      height: 98%;
+      .scale-title {
+        .flex-lr-tb-center;
+        font-size: 12px;
+        color: #ffffff;
+        margin: 11.7% auto 4.7%;
+      }
+      .scale-in, .scale-out {
+        font-size: 14px;
+        color: #ffffff;
+        .flex-lr-tb-center;
+        .show-number {
+          display: inline-block;
+          margin: 0 2px;
+          .single-line-ellipsis;
+        }
+      }
+      .scale-arrow {
+        width: 16%;
+        height: auto;
+        object-fit: contain;
+      }
+
+    }
+
+  }
+ .node-config {
+    font-size: 14px;
+ }
+  .node-tools{
+    .tab-control{
+      right: -42px;
+      .tab-control-circle{
+        background-color: @node-scale;
+      }
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-scale;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-scale);
+    }
+  } 
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-SCALE .node-body .node-actual-body {
+    font-size: 0;
+  }
+  .node-actual.node-type-SCALE .node-body .node-actual-body .scale-in, .node-actual.node-type-SCALE .node-body .node-actual-body .scale-out {
+    font-size: 12px;
+  }
+
+  .node-actual.node-type-SCALE .node-body .node-actual-body .scale-title {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,206 @@
+@tabMobileWidth: 12vw;
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .editer-main{
+    height: 100vh;
+    width: 100vw;
+    .editer-palette{
+      height: auto;
+      .editer-palette-tab{
+        height: 40px;
+        .tabs{
+          height: 100%;
+          &.shrink-with-two-mounted-node{
+            width: calc(~"72vw + 2px") !important;
+          }
+          &.shrink-with-one-mounted-node{
+            width: calc(~"60vw + 2px") !important;
+          }
+          &.shrink-with-zero-mounted-node{
+            width: calc(~"48vw + 2px") !important;
+          }
+          .tab-name{
+            width: @tabMobileWidth;
+            height: calc(~"100% - 1px");
+            font-size: 12px;
+            .tab-separate{
+              height: 50%;
+            }
+          }
+        }
+        .tabs-control{
+          height: 40px;
+        }
+      }
+      .editer-palette-nodes{
+        height: 17.1vh;
+        padding: 0 1vw;
+        .node-preview-palette{
+          .node-preview-icon{
+            height: 10.6vh;
+            width: 10.6vh;
+            font-size: 12px;
+          }
+          .node-preview-name{
+            font-size: 10px;
+            line-height: 1px;
+          }
+        }
+      }
+      .palette-div-delete{
+        height: 17.1vh;
+      }
+    }
+
+    .back-to-entrance{
+      left: 3.5vw;
+      top: 4.2vh;
+      height: 40px;
+      width: 40px;
+    }
+
+    .editer-shelf{
+      width: 54vw;
+      height: 17.1vh;
+      font-size: 12px;
+      .shelf-div{
+        width: 100%;
+        height: 100%;
+        .show-hardware{
+          width: 100%;
+          height: 100%;
+          .connect-icon{
+            height: 100%;
+            width: 15%;
+            .connected-hardware{
+              width: auto;
+              height: 60%;
+            }
+            .disconnected-hardware{
+              width: auto;
+              height: 30%;
+            }
+            .upload-hardware{
+              height: 30%;
+              width: auto;
+            }
+          }
+          .shelf-nodes{
+            margin-left: 0;
+            height: 100%;
+            .shelf-node{
+              height: 100%;
+              margin: 0 8px;
+              &:first-child{
+                margin-left: 16px;
+              }
+              .node-preview-shelf{
+                height: 75%;
+                width: auto;
+                img{
+                  height: 100%;
+                  width: auto;
+                }
+              }
+              .update-mask{
+                font-size: 8px;
+                height: 55%
+              }
+            }
+          }
+          .wifi-connected-div{
+            width: 85%;
+            height: 100%;
+            justify-content: space-around;
+            left: 15%;
+            .upload,.disconnect{
+              width: 36%;
+              height: 60%;
+              font-size: 12px;
+              padding: 0 20px;
+            }
+            .upload{
+              margin: 0;
+            }
+            .disconnect{
+              margin: 0;
+            }
+            .override{
+              font-size: 16px;
+              height: 60%;
+              width: 80px;
+            }
+            .overridetips{
+              font-size: 16px;
+            }
+            .cover-result-text{
+              font-size: 16px;
+            }
+            .running-text{
+              font-size: 16px;
+            }
+          }
+          &:after{
+            width: 20px;
+          }
+        }
+        .noConnection{
+          justify-content: center;
+          .icon-wifi, .icon-ble{
+            height: 60%;
+            width: auto;
+          }
+          .icon-wifi {
+            margin: 0 10px 0 5px;
+          }
+          .icon-ble {
+            margin-right: 10px;
+          }
+          .connect-txt{
+            color: #525252;
+            font-size: 12px;
+          }
+        }
+      }
+      .shelf-div-delete{
+        left: 0;
+        border-bottom-left-radius: 20px;
+      }
+      .update-warning-div{
+        margin-top: 4px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+
+    .editer-canvas{
+      .show-cloud-entrance{
+        width: 40px;
+        height: 40px;
+        right: 3.5vw;
+        top: 4.2vh;
+        .icon-cloud-entrance{
+          width: 16px;
+          height: auto;
+        }
+      }
+      .magnifier{
+        width: 40px;
+        height: 40px;
+        right: 3.5vw;
+        top: 4.2vh;
+        .icon-magnifier{
+          width: 20px;
+          height: auto;
+        }
+        &.adjust-magnifer-position{
+          top: calc(~"4.2vh + 45px");
+        }
+      }
+      .editer-surface-canvas svg .deleteBtn {
+        -webkit-transform: translate(-22px, -22px) scale(0.625);
+        transform: translate(-22px, -22px) scale(0.625);
+      }
+    }
+  }
+}

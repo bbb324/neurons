@@ -1,0 +1,76 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-actual.node-type-COUNTER {
+  color:#fff;
+  background: @node-counter;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  .node-body{
+    border: solid 1px @node-counter-borderColor;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    .counter-title {
+      display: block;
+      height:17px;
+      text-align: center;
+      widows: inherit;
+      line-height: 17px;
+      font-size: 12px;
+    }
+    .counter-value{
+      height: 29px;
+      font-size: 26px;
+      .flex-lr-tb-center;
+      font-weight: 600;
+    }
+    .counter-reset{
+      width: 85.12%;
+      .flex-lr-tb-center;
+      margin: 0 auto;
+      border-radius: 6px;
+      background-color: #b995ff;
+      font-size: 14px;
+      color: #7e4edb;
+      height: 31px;
+    }
+
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-counter;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-counter);
+    }
+  }
+  .node-tools{
+    .tab-control{
+      right: -42px;
+      .tab-control-circle{
+        background-color: @node-counter;
+      }
+    }
+
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-COUNTER {
+    .node-body {
+      .counter-title {
+        font-size: 8px;
+      }
+      .counter-value {
+        height: 13px;
+        font-size: 12px;
+      }
+      .counter-reset {
+        font-size: 8px;
+        height: 17px;
+      }
+    }
+  }
+}

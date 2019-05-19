@@ -1,0 +1,84 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+
+.node-preview.node-type-INDICATOR {
+
+}
+
+.node-actual.node-type-INDICATOR {
+  .node-body {
+    width: 96px;
+    height: 96px;
+    border-radius: 8px;
+	background-color: @node-control;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    border: solid 1px #3a65ab;
+    position: relative;
+    .editer-gear{
+      display: block;
+      width: 20px;
+      height: 20px;
+      float: right;
+    }
+    .node-actual-shadow {
+      width: 55.6px;
+      height: 55.6px;
+      background-color: #3a65ab;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      .flex-lr-tb-center;
+    }
+    .node-actual-icon {
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      background-image: radial-gradient(circle at 50% 50%, #ff7448, #ff6e53 87%, #ff4912);
+	  box-shadow: 0 0 10px 0 #ff3030;
+      &.active {
+        background-image: radial-gradient(circle at 50% 50%, #24ee93, #11e581 86%, #00bb68);
+        box-shadow: 0 0 10px 0 #07ca71;
+      }
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-control;
+    }
+  }
+  .node-port-outputs{
+    .core{
+      background-color: @node-control;
+      .round();
+    }
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-control;
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-INDICATOR{
+    .node-body{
+      width: 60px;
+      height: 60px;
+      .node-actual-shadow{
+        width: 58%;
+        height: 58%;
+        .flex-lr-tb-center;
+        .node-actual-icon{
+          width: 80%;
+          height: 80%;
+        }
+      }
+      .editer-gear {
+        -webkit-transform: scale(0.625);
+        transform: scale(0.625);
+      }
+    }
+  }
+}

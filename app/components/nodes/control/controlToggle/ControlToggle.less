@@ -1,0 +1,109 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+
+.node-preview.node-type-CONTROLTOGGLE {
+   
+}
+
+.node-actual.node-type-CONTROLTOGGLE {
+  .node-body {
+    width: 96px;
+    height: 96px;
+    border-radius: 8px;
+	  background-color: @node-control;
+	  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+	  border: solid 1px #3a65ab;
+      position: relative;
+      .editer-gear{
+        display: block;
+        width: 20px;
+        height: 20px;
+        float: right;
+      }
+    .toggle-bg{
+      width: 60px;
+      height: 28px;
+      .center();
+      background-color: #8abdfa;
+      box-shadow: inset 0 2px 2px 0 rgba(0, 98, 186, 0.2);
+      border: solid 1.6px #3a65ab;
+      -webkit-border-radius: 27px;
+      border-radius: 27px;
+      .toggle-txt{
+        display: inline-block;
+        width: 100%;
+        height: 28px;
+        opacity: 0.99;
+        font-size: 12px;
+        color: #3a65ab;
+        position: relative;
+        padding: 8px 5px 0;
+      }
+      .cloud-btn{
+        top: 0;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        transition: transform 0.2s ease;
+      }
+      .switchONOFF{
+        -webkit-transform: translateX(33px);
+        transform: translateX(33px);
+      }
+
+      .cloud-btn{
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        -webkit-border-radius: 100%;
+        border-radius: 100%;
+        background-image: linear-gradient(153deg, #e8f3ff, #b9daff 38%, #a7d0ff 68%, #86beff);
+        box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.3), inset 0 0 0.5px 0 rgba(255, 255, 255, 0.5);
+        .cloud-btn-inner{
+          width: 99%;
+          height: 99%;
+          .center();
+          -webkit-border-radius: 100%;
+          border-radius: 100%;
+          background-image: linear-gradient(145deg, #ffffff, #e4f1ff);
+        }
+      }
+    }
+    .node-actual-icon {
+      height: 30px;
+      width: 60px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -30px;
+      margin-top: -14px;
+    }
+  }
+  .node-port-outputs{
+    .core{
+      background-color: @node-control;
+      .round();
+    }
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-control;
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-CONTROLTOGGLE{
+    .node-body{
+      width: 60px;
+      height: 60px;
+      .toggle-bg{
+        -webkit-transform: scale(0.625);
+        transform: scale(0.625);
+      }
+      .editer-gear {
+        -webkit-transform: scale(0.625);
+        transform: scale(0.625);
+      }
+    }
+  }
+}

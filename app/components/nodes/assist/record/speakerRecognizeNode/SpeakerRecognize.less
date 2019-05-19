@@ -1,0 +1,23 @@
+@import '../../../nodeColor';
+@import '../../../nodeShape';
+.node-actual.node-type-SPEAKERRECOGNIZE {
+  background-color: @node-sound-speakerRecognize;
+  .node-body{
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .node-port-input .core {
+    border-color: @node-sound-speakerRecognize;
+  }
+  .node-port-outputs{
+    .core{
+      .node-output-port-stying-object-style(@node-sound-speakerRecognize);
+    }
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-sound-speakerRecognize;
+    }
+  } 
+}
+

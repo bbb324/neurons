@@ -1,0 +1,49 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "commonjs": true
+    },
+
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+
+    "plugins": [
+        "react"
+    ],
+
+    "extends": "eslint:recommended",
+
+    "rules": {
+        // enable additional rules
+        "indent": ["warn", 2],
+        "quotes": ["warn", "single"],
+        "semi": ["warn", "always"],
+
+        // react specific rules
+        "react/jsx-uses-vars": ["warn"],
+        "react/jsx-uses-react": ["warn"],
+
+        // disable recommended rules
+        "no-console": "off"
+    },
+
+    "globals": {
+        "createNeuronsFlowEngine": true,
+        "console": true,
+        "device": true,
+        "ble": true,
+        "html2canvas": true,
+        "chrome": true,
+        "WifiWizard": true,
+        "QRCode": true,
+        "AppVersion": true,
+        "electron": true
+    }
+}

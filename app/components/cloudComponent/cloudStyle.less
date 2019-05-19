@@ -1,0 +1,280 @@
+@import '../nodes/nodeShape';
+
+.single-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.project-style {
+  position: relative;
+  width: 320px;
+  height: 210px;
+  .ctrl-btn-outter {
+    width: 180px;
+    height: 84px;
+    border-radius: 42px;
+    background-color: #247fcf;
+    .center();
+    .ctrl-btn {
+      width: 174px;
+      height: 78px;
+      border-radius: 42px;
+      .center();
+      background-image: linear-gradient(132deg, #e8f3ff, #b6d8ff 41%, #b2d6ff);
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+      .ctrl-btn-inner {
+        width: 163px;
+        height: 69px;
+        line-height: 69px;
+        text-align: center;
+        border-radius: 36px;
+        font-size: 26px;
+        color: #19609e;
+        .center();
+        background-color: #ffffff;
+        box-shadow: 0 2px 4px 0 rgba(26, 90, 196, 0.12), inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
+        .ctrl-btn-name {
+          position: absolute;
+          display: block;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+  .ctrl-btn-outter-pressdown {
+    background-color: #1b619e;
+    .ctrl-btn-pressdown {
+      background-image: linear-gradient(156deg, #b3d5fe, #b6d8ff 18%, #b2d6ff);
+      .ctrl-btn-inner-pressdown {
+        background-color: #d4e7ff;
+        box-shadow: 0 2px 4px 0 rgba(26, 90, 196, 0.12), inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+  /*
+	* cloud slider
+  */
+  .slider-cover {
+    width: 280px;
+    height: 28px;
+    border-radius: 10px;
+    background-color: #3d85d9;
+    position: absolute;
+    bottom: 60px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    .rc-slider {
+      width: 260px;
+      margin: 0 auto;
+      .center();
+      .rc-slider-track {
+        background: #ffd181;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.22);
+      }
+      .rc-slider-handle {
+        width: 26px;
+        height: 26px;
+        margin-top: -11px;
+        margin-left: -16px;
+      }
+    }
+  }
+  .cloud-slider.slider-value {
+    position: absolute;
+    font-size: 50px;
+    right: 19px;
+    top: 35px;
+    font-family: dinpro;
+  }
+  /*
+	* cloud toggle
+  */
+  .toggle-bg {
+    width: 120px;
+    height: 50px;
+    .center();
+    background-color: #8abdfa;
+    box-shadow: inset 0 2px 2px 0 rgba(0, 98, 186, 0.2);
+    border: solid 1.6px #3a65ab;
+    -webkit-border-radius: 27px;
+    border-radius: 27px;
+    .toggle-txt {
+      display: inline-block;
+      width: 100%;
+      height: 48px;
+      opacity: 0.99;
+      font-size: 26px;
+      color: #3a65ab;
+      position: relative;
+      padding: 15px 15px 0;
+    }
+    .cloud-btn {
+      top: 0;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      transition: transform 0.2s ease;
+    }
+    .switchONOFF {
+      -webkit-transform: translateX(68px);
+      transform: translateX(68px);
+    }
+    .textPosition {
+
+    }
+  }
+
+  /*
+  * cloug tag
+  */
+  .cloud-label {
+    width: 318px;
+    height: 163px;
+    font-size: 56px;
+    text-align: center;
+    position: absolute;
+    margin-top: 45px;
+    font-family: dinpro;
+    overflow: scroll;
+    .cloud-text-input {
+      &:extend(.single-ellipsis);
+      max-width: 300px;
+      text-align: left;
+      font-size: 18px;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-touch-callout: none;
+      position: absolute;
+      top: 0;
+      margin-left: 10px;
+      white-space: normal;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+    }
+  }
+
+  .cloud-image {
+    width: 318px;
+    height: 163px;
+    font-size: 56px;
+    text-align: center;
+    position: absolute;
+    margin-top: 45px;
+    font-family: dinpro;
+    background: #eaf5ff;
+    img {
+      width: auto;
+      height: 160px;
+    }
+  }
+
+  .cloud-btn {
+    position: absolute;
+    top: -10px;
+    width: 48px;
+    height: 48px;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background-image: linear-gradient(153deg, #e8f3ff, #b9daff 38%, #a7d0ff 68%, #86beff);
+    box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.3), inset 0 0 0.5px 0 rgba(255, 255, 255, 0.5);
+    .cloud-btn-inner {
+      width: 42px;
+      height: 42px;
+      .center();
+      -webkit-border-radius: 100%;
+      border-radius: 100%;
+      background-image: linear-gradient(145deg, #ffffff, #e4f1ff);
+    }
+  }
+
+  /*
+  * cloud text
+  */
+  .cloud-text {
+    width: 318px;
+    height: 166px;
+    text-align: center;
+    background: #eaf5ff;
+    color: #424850;
+    font-size: 16px;
+    position: relative;
+    top: 42px;
+    .cloud-text-input {
+      &:extend(.single-ellipsis);
+      max-width: 300px;
+      background: #eaf5ff;
+      text-align: left;
+      font-size: 16px;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-touch-callout: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      color: #424850;
+    }
+  }
+  /*
+	* cloud number
+	*/
+  .cloud-number {
+    width: 318px;
+    height: 163px;
+    text-align: center;
+    background: #eaf5ff;
+    color: #424850;
+    font-size: 16px;
+    position: relative;
+    top: 45px;
+    .cloud-text-input {
+      &:extend(.single-ellipsis);
+      max-width: 300px;
+      background: #eaf5ff;
+      text-align: left;
+      font-size: 36px;
+      font-family: dinpro;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-touch-callout: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      color: #424850;
+    }
+  }
+  /*
+  * cloud light
+  */
+  .cloud-light {
+    width: 116px;
+    height: 116px;
+    background-color: #3a65ab;
+    .center();
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    .oval-inner {
+      width: 94px;
+      height: 94px;
+      background-image: radial-gradient(circle at 50% 50%, #ff7448, #ff6e53 87%, #ff4912);
+      box-shadow: 0 0 10px 0 #ff3030;
+      -webkit-border-radius: 100%;
+      border-radius: 100%;
+      .center();
+    }
+    .green {
+      background-image: radial-gradient(circle at 50% 50%, #24ee93, #11e581 86%, #00bb68);
+      box-shadow: 0 0 10px 0 #07ca71;
+    }
+  }
+
+  .cloud-chart {
+    position: relative;
+    top: 43px;
+    width: 310px;
+  }
+}

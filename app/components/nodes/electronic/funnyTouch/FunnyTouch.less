@@ -1,0 +1,41 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+/*.node-preview.node-type-FUNNYTOUCH {
+  width: 95px !important;
+  height: 57px !important;
+  .node-preview-icon{
+    width: 95px !important;
+    height: 57px !important;
+  }
+}*/
+
+.node-actual.node-type-FUNNYTOUCH {
+  .node-body{
+    height: 101px;
+    width: 165px;
+    border: 3px solid @node-funnyTouch;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-funnyTouch;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      background-color: @node-funnyTouch;
+    }
+  }  
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-FUNNYTOUCH {
+    .node-body {
+      height: 60px;
+      width: 96px;
+      border-width: 2px;
+    }
+  }
+}

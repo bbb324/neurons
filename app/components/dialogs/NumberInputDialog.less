@@ -1,0 +1,93 @@
+@import '../nodes/nodeShape';
+.ReactModal__Content.ReactModal__Content--after-open.number-input-dialog {
+  width: 410px;
+  height: 528px;
+  padding: 16px 20px;
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
+  background: #FFFFFF;
+  padding: 0;
+  border: none;
+  .center();
+  outline: none;
+  @media screen and (max-height: 600px) {
+    transform: scale(.7);
+  }
+  .key-board{
+    float: left;
+    margin: 0 0 12px 8px;
+  }
+  .number-input-display {
+    .flex-lr-tb-center;
+    height: 80px;
+    width: 356px;
+    background: #F3F3F3;
+    border-radius: 4px;
+    margin: 30px auto 0 auto;
+    color: #262626;
+    line-height: 80px;
+    font-size: 48px;
+  }
+  .number-input-keyboard {
+    width: 262px;
+    margin-top: 10px;
+    margin-left: 25px;
+    .number-input-key {
+      box-sizing: border-box;
+      cursor: pointer;
+      background: #FFFFFF;
+      BORDER: 1px solid #B1D8EF;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 80px;
+      width: 88px;
+      font-weight: normal;
+      font-size: 48px;
+      color: #788DAF;
+      margin: 0 0 -1px -1px;
+      i {
+        font-size: 36px;
+      }
+      &:active{
+        background: #DDF1FF;
+      }
+    }
+
+  }
+  .option{
+    float: right;
+    margin-top: 10px;
+    margin-right: 25px;
+  }
+  .number-clear, .number-space{
+    background: #49C3FF;
+    color: #FFFFFF;
+    width: 90px;
+    height: 158px;
+    line-height: 160px;
+    text-align: center;
+    font-size: 32px;
+  }
+  .number-cancel, .number-confirm{
+    border-top: 1px solid #D8D8D8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 76px;
+    line-height: 76px;
+    font-size: 28px;
+    color: #13B7FF;
+  }
+  .number-cancel{
+    border-right: 1px solid #D8D8D8;
+    color: #9CAFCE;
+  }
+  .number-cancel:active{
+    color: #6C798F;
+  }
+  .number-confirm:active{
+    color: #257FAC;
+  }
+}

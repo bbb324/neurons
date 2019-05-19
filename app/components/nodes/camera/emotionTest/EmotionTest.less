@@ -1,0 +1,29 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-actual.node-type-EMOTION_TEST {
+  background: #4c5564;
+  .node-body {
+    .node-actual-body {
+      .node-actual-icon {
+        width: 54.55%;
+        height: 54.55%;
+        object-fit: scale-down;
+      }
+    }
+  }
+  .node-port-input .core {
+    border-color: @node-camera-emotion-test;
+  }
+
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-camera-emotion-test;
+    }
+  }
+
+  .node-port-outputs{
+    .core{
+      .node-output-port-stying-object-style(@node-camera-emotion-test);
+    }
+  }
+}

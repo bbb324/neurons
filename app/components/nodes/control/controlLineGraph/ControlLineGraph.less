@@ -1,0 +1,57 @@
+@import '../../nodeColor';
+.node-actual.node-type-LINE_GRAPH{
+  height: 130px;
+  width: 150px;
+  margin: 5px;
+  border-radius: 8px;
+  background: #4a90e2;
+  .node-actual-title{
+    position: relative;
+    top: 3px;
+    left: 10px;
+    color: #ffffff;
+    font-size: 10px;
+  }
+  .editer-gear{
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: right;
+    position: relative;
+  }
+  .node-actual-content{
+    margin-top: 5px;
+    #cloud-chart-canvas{
+      /*width: 142px !important;*/
+      margin: 0 auto;
+    }
+    .chart-fake{
+      width: 150px;
+      height: 88px;
+    }
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-control;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-control;
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-LINE_GRAPH{
+    height: 76px;
+    width: 100px;
+    .node-actual-content{
+      margin-top: 0;
+    }
+    .editer-gear {
+      -webkit-transform: scale(0.625);
+      transform: scale(0.625);
+    }
+  }
+}

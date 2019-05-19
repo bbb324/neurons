@@ -1,0 +1,92 @@
+@import '../../../nodeColor';
+@import '../../../nodeShape';
+.node-actual.node-type-PATTERN {
+   .title{
+    display: none;
+  }
+  .node-body {
+    background: @node-pattern;
+    border: 2px solid @node-color-borderColor;
+    width: 88px;
+    height: 88px; 
+   .display-pattern{
+      display: block;
+      height: 56px;
+      width: 64px;
+      vertical-align: middle;
+      margin: 14px auto;
+      .ledList{
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        margin: 0 2px;
+      }
+      .ledList:nth-child(1){
+        margin: 0 3px 0 1px;
+      }
+      .ledList:nth-child(9){
+        margin: 7px 6px 0 2px;
+      }      
+      .ledList:nth-child(15){
+        margin: 7px 3px 0 0;
+      }
+      .mid{
+        position: absolute;
+        top: 16px;
+        right: 0px;
+      }
+      .lower{
+        margin:7px 2px 0 2px;
+        float: right;
+      }    
+      .ledListPreview{
+        display: inline-block;
+        float: left;
+        width: 64px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+      }
+    }   
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-pattern;
+    }
+  }
+  .node-port-outputs {
+    .core {
+      .node-output-port-stying-object-style(@node-pattern);
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border: 2px solid @node-pattern;
+    }
+  }
+  .node-config {
+    width: 200px;
+    height: 152px;
+  }  
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-PATTERN{
+    transform: scale(0.64) !important;
+    .node-port-inputs .core{
+      width: 16px !important;
+      height: 16px !important;
+    }
+    .node-port-output .core{
+      width: 16px !important;
+      height: 16px !important;
+      .node-port-value{
+        width: 10px !important;
+        height: 10px !important;
+      }
+    }
+
+  }
+}

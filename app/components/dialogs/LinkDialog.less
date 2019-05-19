@@ -1,0 +1,354 @@
+@import '../nodes/nodeShape';
+
+.ReactModal__Content.ReactModal__Content--after-open.link-dialog {
+  width: 720px;
+  height: 600px;
+  background: #56a1fa;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  outline: none;
+  padding: 0;
+  .dialog-container {
+    width: inherit;
+    height: inherit;
+    font-size: 24px;
+    .dialog-title {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      margin: 0 auto;
+      color: #FFFFFF;
+      font-size: 30px;
+      text-align: center;
+      position: absolute;
+      top: 15%;
+    }
+
+    .ble-dialog-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index:999;
+      width: 68px;
+      height: 68px;
+    }
+
+    .dialog-footer {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 102px;
+      background: #FFFFFF;
+      text-align: center;
+      .flex-lr-tb-center;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      .dialog-connect-txt {
+        display: inline-block;
+        color: #455366;
+        margin-right: 18px;
+      }
+      .dialog-connect-button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 195px;
+        height: 48px;
+        border-radius: 24px;
+        background-color: #3391ff;
+        color: #FFFFFF;
+        &:active{
+          background-color: #4985ce;
+          border: solid 2px #4985ce;
+        }
+      }
+    }
+    .ble-init {
+      .dialog-body {
+        width: 352px;
+        height: 353px;
+        .center();
+        .bluetooth-connect {
+          width: inherit;
+          height: inherit;
+          position: relative;
+          .dialog-link-autoconnect {
+            width: 285px;
+            height: 140px;
+            border-radius: 75px;
+            color: #FFF;
+            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            text-align: center;
+            .icon-ble {
+              width: 285px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+    .ble-list-div {
+      width: 100%;
+      height: 100%;
+      background: #FFFFFF;
+      border-radius: 30px;
+      .ble-list-header {
+        height: 90px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        background: #56a1fa;
+        display: flex;
+        align-items: center;
+        .ble-list-img {
+          width: 19px;
+          height: auto;
+          float: left;
+          margin-left: 52px;
+        }
+        .ble-list-title {
+          font-size: 30px;
+          color: #FFFFFF;
+          margin-left: 22px;
+        }
+      }
+      .dialog-link-scan-list {
+        margin: 40px auto 0;
+        color: #FFFFFF;
+        height: calc(~"100% - 90px");
+        overflow: hidden;
+        .connect-tab {
+          border: none;
+          width: 80%;
+          margin: 0 auto;
+          thead {
+            font-size: 28px;
+            color: #455366;
+            .device {
+              width: 50%;
+              float: left;
+              text-align: left;
+              display: inline-block;
+            }
+            .distance {
+              width: 50%;
+              text-align: right;
+              display: inline-block;
+            }
+          }
+          tbody {
+            color: #3391ff;
+            height: 210px;
+            display: block;
+            overflow: scroll;
+            margin-top: 20px;
+            td {
+              width: 50%;
+              display: inline-block;
+            }
+            tr {
+              height: 55px;
+              display: block;
+              td:first-child {
+                text-align: left;
+              }
+              td:last-child {
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+      .ble-list-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: inherit;
+        background: #FFFFFF;
+        height: 82px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        .ble-list-refresh {
+          .flex-lr-tb-center;
+          margin: 0 auto;
+          width: 183px;
+          height: 48px;
+          border-radius: 24px;
+          background-color: #3391ff;
+          border: solid 2px #3391ff;
+          color: #FFFFFF;
+          text-align: center;
+          &:active{
+            background-color: #4985ce;
+            border: solid 2px #4985ce;
+          }
+        }
+      }
+    }
+    .ble-connect-tips {
+      .ble-connect-tips-header {
+        color: #FFFFFF;
+        display: block;
+        width: 336px;
+        height: 33px;
+        margin: 80px auto 0;
+      }
+      .ble-connect-tips-body {
+        position: relative;
+        z-index: 1;
+        .ble-connect-tips-img {
+          width: 409px;
+          height: 278px;
+          display: block;
+          margin: 63px auto 0;
+        }
+      }
+      .ble-connect-tips-footer {
+        width: 100%;
+        height: 90px;
+        position: absolute;
+        bottom: 0;
+        background: #FFFFFF;
+        text-align: center;
+        .flex-lr-tb-center;
+        z-index: 2;
+        -webkit-border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        .ble-connect-tips-confirm {
+          .flex-lr-tb-center;
+          width: 144px;
+          height: 48px;
+          background-color: #3391ff;
+          color: #FFFFFF;
+          -webkit-border-radius: 24px;
+          border-radius: 24px;
+        }
+      }
+    }
+    .ble-connect-finished {
+      .ble-connect-finished-header {
+        color: #FFFFFF;
+        width: 100%;
+        height: 42px;
+        margin: 80px auto 0;
+        .flex-lr-tb-center;
+        .ble-connect-header-txt {
+          margin-right: 23px;
+        }
+        .ble-connect-header-icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .ble-connect-finished-body {
+        margin-top: 63px;
+        text-align: center;
+        .icon-ble {
+          width: 285px;
+          height: 140px;
+        }
+      }
+      .ble-connect-finished-footer {
+        width: 100%;
+        height: 90px;
+        position: absolute;
+        bottom: 0;
+        background: #FFFFFF;
+        text-align: center;
+        .flex-lr-tb-center;
+        z-index: 2;
+        -webkit-border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        .ble-connect-finished-cancel, .ble-connect-finished-confirm {
+          .flex-lr-tb-center;
+          width: 195px;
+          height: 48px;
+          border-radius: 24px;
+          border: solid 2px #3391ff;
+          color: #3391ff;
+        }
+        .ble-connect-finished-confirm {
+          background: #3391ff;
+          color: #FFFFFF;
+          margin-left: 116px;
+        }
+      }
+    }
+  }
+}
+
+.auto-connect-less-one-meter {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  border: 2px solid #ffffff;
+  .center;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.circle-animation1, .circle-animation2, .circle-animation3 {
+  -webkit-animation: circle-animate;
+  -webkit-animation-duration: 2.5s;
+  -webkit-animation-timing-function: bezier-curve(0, 0.41, 1, 1);
+  -webkit-animation-iteration-count: infinite;
+}
+
+.circle-animation2 {
+  -webkit-animation-delay: 0.5s;
+}
+
+.circle-animation3 {
+  -webkit-animation-delay: 1s;
+}
+
+@-webkit-keyframes circle-animate {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .ReactModal__Content.ReactModal__Content--after-open.link-dialog {
+    width: 572px !important;
+    height: 480px !important;
+    transform: scale(0.6) !important;
+    -webkit-transform: scale(0.6) !important;
+    .dialog-container{
+      width: 100%;
+      height: 100%;
+      font-size: 18px;
+      .dialog-title{
+        font-size: 24px;
+      }
+      .ble-list-div{
+        .ble-list-header {
+          .ble-list-title {
+            font-size: 24px;
+          }
+        }
+        .dialog-link-scan-list{
+          .connect-tab {
+            border: none;
+            width: 80%;
+            margin: 0 auto;
+            thead {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

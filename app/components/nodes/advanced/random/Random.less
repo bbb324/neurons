@@ -1,0 +1,70 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-actual.node-type-RANDOM {
+  color:#fff;
+  background: @node-random;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  .node-body{
+    border: solid 1px @node-random-borderColor;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    .random-title {
+
+    }
+    .random-value{
+      height: 29px;
+      font-size: 26px;
+      .flex-lr-tb-center;
+      font-weight: 600;
+    }
+    .random-trigger{
+      width: 85.12%;
+      .flex-lr-tb-center;
+      margin: 0 auto;
+      border-radius: 6px;
+      background-color: #b995ff;
+      font-size: 14px;
+      color: #7e4edb;
+      height: 31px;
+    }
+
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-random;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-random);
+    }
+    .show{
+      margin-left: 0;
+    }
+  }
+  .node-tools{
+    .tab-control{
+      right: -42px;
+      .tab-control-circle{
+        background-color: @node-random;
+      }
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-RANDOM {
+    .node-body {
+      .random-value {
+        height: 13px;
+        font-size: 12px;
+      }
+      .random-trigger {
+        font-size: 12px;
+        height: 17px;
+      }
+    }
+  }
+}

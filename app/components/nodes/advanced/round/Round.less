@@ -1,0 +1,92 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-preview.node-type-ROUND {
+  .node-preview-icon{
+    background-color: @node-round;
+    border: solid 1px @node-round-borderColor;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 100%;
+    .flex-lr-tb-center;
+    width: 64px;
+  }
+  .node-preview-name {
+    margin-top: 9px;
+  }
+}
+
+.node-actual.node-type-ROUND {
+  .node-body{
+    background: @node-round;
+    border: solid 1px @node-round-borderColor;
+    color: #ffffff;
+    .title{
+      font-size: 15px;
+    }
+    .value{
+      width: 80%;
+      height: 20%;
+      font-size: 20px;
+      margin: 10% auto 0;
+      position: relative;
+      text-align: center;
+      display: block;
+      &:extend(.single-line-ellipsis);
+      .integer{
+        width: 36px;
+        height: 21px;
+      }
+      .dot{
+          width: 5.39px;
+          height: 21px;     
+      }
+      .decimal{
+          width: 31px;
+          height: 24px;
+          position: relative;
+          text-decoration: line-through;
+      }
+    }
+    .line {
+      width: 26px;
+      height: 3px;
+      border: solid 1px #ffffff;
+      margin: 0 auto;
+      position: relative;
+      line-height: 60px;
+      text-align: center;
+      display: block;     
+    }
+  }
+  .node-config {
+    font-size: 14px;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-round;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-round;
+    }
+  }
+   .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-round);
+    }
+    .show{
+      margin-left: 0;
+    }
+   }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+
+  .node-preview.node-type-ROUND .node-preview-icon {
+    font-size: 12px;
+  }
+}

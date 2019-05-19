@@ -1,0 +1,50 @@
+@import '../../../nodeColor';
+@import '../../../nodeShape';
+.node-actual.node-type-COLOR {
+   .title{
+    display: none;
+  }
+  .node-body {
+    background: @node-color;
+    border: 2px solid @node-color-borderColor;
+    .color-selected{
+      width: 40px;
+      height: 40px;
+      border: 3px solid @node-color-borderColor;
+      -webkit-border-radius: 100%;
+      border-radius: 100%;
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-color;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-color;
+    }
+  }
+  .node-port-outputs {
+    .core {
+      .node-output-port-stying-object-style(@node-color);
+    }
+  }
+
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-COLOR{
+    .node-body {
+      .color-selected{
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+  }
+}

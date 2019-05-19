@@ -1,0 +1,43 @@
+@import '../../../nodeColor';
+@import '../../../nodeShape';
+.node-actual.node-type-RGBMIX {
+  background-color: @node-rgbMix;
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-rgbMix;
+    }
+  }
+  .node-port-outputs, .node-port-inputs {
+    .core {
+      background-color: @node-rgbMix;
+    }
+  }
+  .node-port-outputs {
+    .core {
+      .node-output-port-stying-object-style(@node-rgbMix);
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border: solid 1px #2b313c;
+      border-radius: 9px;
+      line-height: 18px;
+      color: #FFF;
+      font-size: 10px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: nowrap;
+      .node-port-label {
+        flex: 0 0 10px;
+      }
+      .node-port-value{
+        max-width: 30px;
+        flex: 1 1 auto;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+

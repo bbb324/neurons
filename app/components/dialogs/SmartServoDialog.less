@@ -1,0 +1,113 @@
+.ReactModal__Content.ReactModal__Content--after-open.smart-servo-dialog{
+  width: 770px;
+  height: 473px;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffffff;
+  @media screen and (max-height: 600px) {
+    transform: scale(.7);
+  }
+  .smart-servo-con{
+    height: 100%;
+    position: relative;
+    .image-section{
+      width: 100%;
+      height: 353px;
+      padding-top: 70px;
+      background-color: #dcedff;
+      box-shadow: 0 1px 0 0 rgba(64, 136, 221, 0.42);
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      .text-tips{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 70px;
+        height: 42px;
+        line-height: 42px;
+        font-size: 30px;
+        color: #455366;
+      }
+      .servo-list-div{
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 670px;
+        height: 105px;
+        margin: 0 auto;
+        overflow-x: auto;
+        overflow-y: hidden;
+        .servo-list{
+          display: flex;
+          align-items: center;
+          width: auto;
+          height: 100%;
+          li{
+            height: 95px;
+            width: auto;
+            margin-right: 30px;
+            position: relative;
+            &.selected{
+              height: 105px;
+              .no{
+                bottom: 16px;
+                background-color: #2589ff;
+              }
+            }
+            &:first-child{
+              height: 90px;
+              margin-right: 60px;
+            }
+            &:last-child{
+              margin-right: 0;
+            }
+            img{
+              height: 100%;
+              width: auto;
+            }
+            .no{
+              position: absolute;
+              left: 24px;
+              bottom: 11px;
+              width: 47px;
+              height: 25px;
+              border-radius: 3px;
+              background-color: #6f88ad;
+              font-size: 16px;
+              line-height: 25px;
+              font-weight: 500;
+              text-align: center;
+              color: #dbebff;
+            }
+          }
+        }
+      }
+    }
+    .button-section{
+      height: 120px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .select{
+        width: 160px;
+        height: 48px;
+        border-radius: 100px;
+        background-color: #2589ff;
+        font-size: 22px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 48px;
+      }
+      .select-disable{
+        background-color: #d2e7ff;
+      }
+    }
+    .close-button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 9;
+      width: 68px;
+    }
+  }
+}

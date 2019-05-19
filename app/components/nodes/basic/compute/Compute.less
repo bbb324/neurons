@@ -1,0 +1,59 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-actual.node-type-COMPUTE {
+  background: @node-compute;
+  .node-body{
+    border: solid 1px @node-compute-borderColor;
+    .node-actual-body{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 24px;
+      width: 80%;
+      height: 80%;
+      margin: 0 auto;
+      .node-actual-icon{
+        height: 30%;
+        width: auto;
+        margin-left: 2px;
+        margin-top: -2px;
+      }
+      .node-actual-value{
+        font-size: 20px;
+        font-weight: 600;
+        &:extend(.single-line-ellipsis);
+      }
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-compute;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      .node-output-port-number-style(@node-compute);
+    }
+  }
+  .node-config {
+    font-size: 14px;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-compute;
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-COMPUTE{
+    .node-body{
+      .node-actual-body{
+        .node-actual-value{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

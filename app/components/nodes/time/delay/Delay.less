@@ -1,0 +1,68 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+
+.node-actual.node-type-DELAY {
+  color:#fff;
+  background: @node-delay;
+  .node-body{
+    border: solid 1px @node-delay-borderColor;
+    .node-actual-body {
+      height: inherit;
+      padding-top: 17%;
+      .delay-title {
+        display: flex;
+        height: 19%;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+      }
+      .delay-number-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        width: 85%;
+        height: 42%;
+        margin: 13% auto 0;
+        font-size: 26px;
+        .delay-value {
+          font-weight: 500;
+          &:extend(.single-line-ellipsis);
+        }
+      }
+    }
+
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-delay;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-delay);
+    }
+    .show{
+      margin-left: 0;
+    }
+  }
+  .node-tools{
+    .tab-control{
+      right: -42px;
+      .tab-control-circle{
+        background-color: @node-delay;
+      }
+    }
+
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-DELAY .node-body .node-actual-body {
+    .delay-number-wrap {
+      font-size: 18px;
+    }
+  }
+}
+

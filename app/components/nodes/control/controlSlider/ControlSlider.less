@@ -1,0 +1,85 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+
+.node-preview.node-type-NUMBER_INPUT {
+
+}
+
+.node-actual.node-type-SLIDER {
+  width: 160px;
+  height: 80px;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  border: solid 1px #3a65ab;
+  .node-body{
+    height: inherit;
+    .editer-gear{
+      display: block;
+      width: 20px;
+      height: 20px;
+      float: right;
+    }
+    .slider-value{
+      font-size: 20px;
+      font-family: dinpro;
+      color: #ffffff;
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      text-align: center;
+      margin-left: 8px;
+      line-height: 31px;
+    }
+    .rc-slider {
+      width: 120px;
+      margin: 26px auto 0 auto;
+      .rc-slider-track {
+        background: #ffd181;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.22);
+      }
+      .rc-slider-handle {
+        width: 26px;
+        height: 26px;
+        margin-top: -11px;
+        margin-left: -12px;
+      }
+    }
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-control;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-control);
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-SLIDER{
+    width: 120px;
+    height: 60px;
+    .node-body{
+      .slider-value{
+        font-size: 16px;
+      }
+      .rc-slider{
+        width: 75%;
+        margin: 10px auto 0;
+        .rc-slider-handle{
+          width: 20px;
+          height: 20px;
+          margin-top: -9px;
+        }
+      }
+      .editer-gear {
+        -webkit-transform: scale(0.625);
+        transform: scale(0.625);
+      }
+    }
+  }
+}

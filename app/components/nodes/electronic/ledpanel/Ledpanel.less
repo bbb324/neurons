@@ -1,0 +1,38 @@
+@import '../../nodeColor';
+
+.node-actual.node-type-LEDPANEL {
+  .node-body{
+    border: 3px solid @node-ledpanel;
+    height: 141px;
+    width: 141px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-ledpanel;
+    }
+  }
+  .node-config {
+    width: 200px;
+    height: 152px;
+    .title {
+      display: none;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-ledpanel;
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-LEDPANEL {
+    .node-body {
+      width: 62px;
+      height: 62px;
+      border-width: 2px;
+    }
+  }
+}

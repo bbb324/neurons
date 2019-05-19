@@ -1,0 +1,30 @@
+@import '../../nodeColor';
+.node-preview.node-type-SEGDISPLAY {
+  position: relative;
+}
+
+.node-actual.node-type-SEGDISPLAY {
+  color:#fff;
+  font-size: 10px;
+  text-align: center;
+  height: 88px;
+  width: 176px;
+  .node-actual-body{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    .node-actual-icon {
+      display: block;
+      margin: auto;
+      width: 121px;
+      height: auto;
+    }
+    .node-actual-name {
+      display: block;
+      margin: 6px auto 0 auto;
+      font-size: 10px;
+      color: #FFF;
+    }
+  }
+}

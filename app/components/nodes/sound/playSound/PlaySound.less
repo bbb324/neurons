@@ -1,0 +1,16 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-actual.node-type-PLAYSOUND {
+  .node-body {
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-sound-playSound;
+    }
+  }
+  .node-port-input .core {
+    border-color: @node-sound-playSound;
+  }
+}

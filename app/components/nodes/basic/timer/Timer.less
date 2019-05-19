@@ -1,0 +1,57 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-actual.node-type-TIMER {
+  background: @node-timer;
+  .node-body{
+    border: solid 1px @node-timer-borderColor;
+    .node-actual-body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      .node-actual-interval {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+      .node-interval-wrap {
+        .flex-lr-tb-center;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 70%;
+        font-size: 26px;
+        .node-actual-time {
+          font-weight: 600;
+          &:extend(.single-line-ellipsis);
+        }
+      }
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-timer;
+    }
+  }
+  .node-port-outputs{
+    .core{
+      background-color: @node-timer;
+    }
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-timer;
+    }
+  }
+}
+
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-TIMER .node-body .node-actual-body {
+    .node-interval-wrap {
+      font-size: 14px;
+    }
+    .node-actual-interval {
+      font-size: 8px;
+    }
+  }
+}

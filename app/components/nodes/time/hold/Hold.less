@@ -1,0 +1,54 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+
+.node-actual.node-type-HOLD {
+  background: @node-hold;
+  .node-body{
+    border: solid 1px @node-hold-borderColor;
+    .hold {
+      width: 75%;
+      text-align: center;
+      color: #ffffff;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      top: -3px;
+     font-family: LucidaGrande;
+     font-size: 16.8px;      
+    }
+    .arrow {
+      width: 85%;
+      height: 48%;
+      object-fit: contain;
+      opacity: 0.96;
+      display: block;
+      transform: translateY(-50%);
+    }     
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-hold;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-hold;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-hold);
+    }
+    .show{
+      margin-left: 0;
+    }
+  }    
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-HOLD .node-body .hold {
+    font-size: 12px;
+  }
+}
+

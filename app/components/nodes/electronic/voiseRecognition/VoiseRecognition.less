@@ -1,0 +1,36 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-actual.node-type-VOISERECOGNITION {
+  .node-body{
+    height: 101px;
+    width: 165px;
+    border: 3px solid @node-voiceRecognition;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-voiceRecognition;
+    }
+  }
+  .node-port-outputs{
+    .core{
+      .node-output-port-stying-object-style(@node-voiceRecognition);
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-voiceRecognition;
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-VOISERECOGNITION {
+    .node-body {
+      height: 60px;
+      width: 96px;
+      border-width: 2px;
+    }
+  }
+}

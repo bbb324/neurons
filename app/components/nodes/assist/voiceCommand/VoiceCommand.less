@@ -1,0 +1,56 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-preview.node-type-VOICECOMMAND {
+  .node-preview-icon {
+    margin: 0 auto;
+  }
+}
+
+.node-actual.node-type-VOICECOMMAND {
+  background: @node-voiceCommand;
+  .node-body {
+    border: solid 1px @node-voiceCommand-borderColor;
+    .voiceCommand {
+      height: 14px;
+      font-size: 10px;
+      text-align: center;
+      color: #ffffff;
+    }
+    .icon {
+      width: 22px;
+      height: 31px;
+      opacity: 0.8;
+      position: relative;
+      top: 8px;    
+    }
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-voiceCommand;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-voiceCommand;
+    }
+  }
+  .node-port-outputs{
+    .core{
+      .node-output-port-stying-object-style(@node-voiceCommand);
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-VOICECOMMAND{
+    .node-body{
+      .icon{
+        width: 18px;
+        height: auto;
+        top: 4px;
+      }
+    }
+
+  }
+}
+

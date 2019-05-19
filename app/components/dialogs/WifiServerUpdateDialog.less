@@ -1,0 +1,126 @@
+@import '../nodes/nodeShape';
+
+.ReactModal__Content.ReactModal__Content--after-open.server-update-dialog {
+  width: 720px;
+  height: 600px;
+  padding: 0;
+  border-radius: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  border: none;
+  font-family: sans-serif;
+  @media screen and (max-height: 600px) {
+    transform: scale(.7);
+  }
+  .server-update-div {
+    position: relative;
+    width: inherit;
+    .image-illustration {
+      position: relative;
+      width: inherit;
+      height: 304px;
+      background-color: #55a1fa;
+      box-shadow: 0 1px 0 0 #4088dd;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      .icon-server-update {
+        width: 157px;
+        height: 154px;
+        display: block;
+        .center();
+      }
+      .icon-server-update-hint {
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: 55%;
+        transform: translateY(-55%);
+        left: 66%;
+      }
+      .updateInfo {
+        position: absolute;
+        left: 13px;
+        bottom: 13px;
+        color: #FFFFFF;
+        font-size: 14px;
+      }
+      .loading {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 135px;
+        height: 6px;
+        background-color: transparent;
+        transition: width 0.3s ease;
+        background-image: linear-gradient(left, #02EEFF, #00FF88);
+        background-image: -webkit-linear-gradient(left, #02EEFF, #00FF88);
+      }
+
+    }
+    .text-illustration {
+      text-align: center;
+      .title-h1 {
+        display: block;
+        font-size: 30px;
+        color: #455366;
+        margin-top: 36px;
+      }
+      .title-h2 {
+        display: block;
+        width: 576px;
+        margin: 8px auto 0;
+        font-size: 18px;
+        color: #455366;
+        &.alert {
+          color: #f65959;
+        }
+      }
+      .button {
+        display: block;
+        font-size: 20px;
+        margin: 36px auto 0;
+        width: 160px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        border-radius: 24px;
+        background-color: #3391ff;
+        color: #FFFFFF;
+        &.hide {
+          display: none;
+        }
+      }
+    }
+    .show-loading-div {
+      text-align: center;
+      .title-h1 {
+        display: block;
+        font-size: 30px;
+        color: #455366;
+        margin: 36px 0 20px 0;
+      }
+      .title-h2 {
+        font-size: 18px;
+        color: #455366;
+      }
+      .loading {
+        display: inline-block;
+        margin-left: 5px;
+        span {
+          width: 8px;
+          height: 8px;
+          margin:2px;
+        }
+      }
+    }
+    .wifiServer-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+}

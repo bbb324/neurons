@@ -1,0 +1,34 @@
+@import '../../../nodeColor';
+@import '../../../nodeShape';
+.node-actual.node-type-FACE {
+  .node-body {
+    background: @node-face;
+    border: 2px solid @node-face-borderColor;
+    .face-icon{
+      width: 80%;
+      height: 80%;
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      object-fit: scale-down;
+      background-size: 100% 100%;
+    }    
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-face;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-face;
+    }
+  }
+  .node-port-outputs {
+    .core {
+      .node-output-port-stying-object-style(@node-face);
+    }
+  }
+
+}

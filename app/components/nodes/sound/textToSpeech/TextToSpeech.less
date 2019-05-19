@@ -1,0 +1,44 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-actual.node-type-TEXTTOSPEECH {
+
+  .node-body {
+    background-repeat: no-repeat;
+    background-size: contain;
+    .node-actual-body {
+      font-size: 24px;
+      width: 70px;
+      height: 40px;
+    }
+  }
+  .node-port-input .core {
+    border-color: @node-sound-textToSpeech;
+  }
+  .node-port-outputs{
+    .core{
+      .node-output-port-stying-object-style(@node-sound-textToSpeech);
+    }
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-sound-textToSpeech;
+    }
+  } 
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-TEXTTOSPEECH{
+    .node-port-input{
+      .core{
+        .node-port-value{
+          width: 8px !important;
+          height: 8px !important;
+          img{
+            width: inherit !important;
+            height: inherit !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+.ReactModal__Content.ReactModal__Content--after-open.micro-cognitive-dialog {
+  width: 720px;
+  height: 600px;
+  padding: 0;
+  border-radius: 30px;
+  background-color: #FFFFFF;
+  border: none;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  color: #FFFFFF;
+  font-family: sans-serif;
+  .micro-cognitive-con{
+    height: 100%;
+    position: relative;
+    .input-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 80%;
+      padding-top: 9.4%;
+      background-color: #56a1fa;
+      box-shadow: 0 1px 0 0 #4088dd;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      .title-con{
+        text-align: center;
+        margin-bottom: 35px;
+        .main-title{
+          font-size: 30px;
+          font-weight: 500;
+          padding: 0;
+          margin: 0;
+        }
+        .tips-title{
+          font-size: 18px;
+          line-height: 2;
+        }
+      }
+      .field-con{
+        width: 68%;
+        .field-tpl{
+          margin-bottom: 5px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+          .field-label{
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+          }
+          .input-div{
+            float: left;
+            width: 77.8%;
+            height: 48px;
+            position: relative;
+            .field-input{
+              width: 100%;
+              height: 100%;
+              border-radius: 3px;
+              outline: none;
+              border: none;
+              background-color: #428adf;
+              font-size: 18px;
+              padding-left: 5px;
+              color: #ffffff;
+              &:disabled{
+                opacity: .5;
+              }
+            }
+            .clear-icon{
+              display: none;
+              position: absolute;
+              right: 5px;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 14px;
+              height: 14px;
+              border-radius: 50%;
+              background-color: rgba(255, 255, 255,.8);
+              text-align: center;
+              font-size: 10px;
+            }
+          }
+
+          .status-section{
+            float: right;
+            width: 19.8%;
+            height: 48px;
+            .initial-text{
+              display: inline-block;
+              width: 100%;
+              height: 100%;
+              border-radius: 3px;
+              border: solid 2px #BBD9FD;
+              font-size: 20px;
+              font-weight: 500;
+              text-align: center;
+              line-height: 48px;
+            }
+            .loading{
+              width: 100%;
+              height: 100%;
+              border-radius: 3px;
+              border: solid 2px #BBD9FD;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              span{
+                width: 6.4px;
+                height: 6.4px;
+                background-color: #ffffff;
+              }
+            }
+            img{
+              display: block;
+              width: 40px;
+              margin: 0 auto;
+            }
+          }
+          &:after{
+            display: table;
+            clear: both;
+            content: '';
+            height: 0;
+            overflow: hidden;
+          }
+        }
+      }
+      .extra-con{
+        display: flex;
+        align-items: center;
+        flex: 2 2 auto;
+        .link-text{
+          display: inline-block;
+          margin-right: 20px;
+          font-size: 18px;
+        }
+        img{
+          width: 25px;
+        }
+      }
+    }
+    .button-section {
+      display: flex;
+      height: 20%;
+      justify-content: center;
+      align-items: center;
+      .set-button {
+        width: 160px;
+        height: 48px;
+        border-radius: 24px;
+        background-color: #3391ff;
+        font-size: 22px;
+        font-weight: 500;
+        text-align: center;
+        line-height: 48px;
+        &.button-disabled{
+          background-color: #D2E7FF;
+        }
+      }
+    }
+    .close-button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 9;
+      width: 68px;
+    }
+  }
+
+}
+
+

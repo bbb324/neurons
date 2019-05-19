@@ -1,0 +1,51 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+
+.node-actual.node-type-TODAY {
+  background: @node-today;
+  .node-body{
+    border: solid 1px @node-today-borderColor;
+    .date {
+      height: 24px;
+      font-size: 15.2px;
+      text-align: center;
+      color: #ffffff;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .week {
+      font-size: 19.5px;
+      font-weight: 600;
+    }
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-today;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-today);
+      .node-port-value {
+        width: 35px;
+      }
+    }
+    .show{
+      margin-left: 0;
+    }
+  }    
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-TODAY .node-body {
+    .date {
+      font-size: 12px;
+    }
+    .week {
+      font-size: 14px;
+    }
+  }
+}
+

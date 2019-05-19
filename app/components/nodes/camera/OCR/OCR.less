@@ -1,0 +1,23 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-actual.node-type-OCR {
+  .node-body {
+    -webkit-background-size: 100%;
+    background-size: 100%;
+  }
+  .node-port-input .core {
+    border-color: @node-camera-ocr;
+  }
+
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-camera-ocr;
+    }
+  }
+
+  .node-port-outputs{
+    .core{
+      .node-output-port-stying-object-style(@node-camera-ocr);
+    }
+  }
+}

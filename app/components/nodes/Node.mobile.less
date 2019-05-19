@@ -1,0 +1,135 @@
+@media (max-device-width: 767px) and (orientation: landscape) {
+  @width: 56px;
+  @height: 56px;
+
+  .node-actual[data-category="common"],
+  .node-actual[data-category="LED"],
+  .node-actual[data-category="MOTORS"],
+  .node-actual[data-category="COLORSENSOR"],
+  .node-actual[data-category="OLED_DISPLAY"],
+  .node-actual[data-category="SERVO"],
+  .node-actual[data-category="advanced"],
+  .node-actual[data-category="COUNTER"],
+  .node-actual[data-category="time"],
+  .node-actual[data-category="data"],
+  .node-actual[data-category="RECORD"],
+  .node-actual[data-category="SPEAKERRECOGNIZE,OCR"],
+  .node-actual[data-category="sound"],
+  .node-actual[data-category="camera"],
+  .node-actual[data-category="VOISERECOGNITION"],
+  .node-actual[data-category="SNAPSHOT"],
+  .node-actual[data-category="BUZZER"] {
+    width: @width;
+    height: @height;
+  }
+  .tab-control {
+    width: 16px;
+    height: 16px;
+    top: -15px;
+    right: -15px;
+    .tab-control-circle {
+      width: 16px;
+      height: 16px;
+      .icon-delete {
+        font-size: 8px;
+      }
+    }
+  }
+  .node-actual .node-port-inputs, .node-actual .node-port-outputs {
+    .node-port-output {
+      width: 28px;
+      height: 25px;
+    }
+    .node-port-input {
+      width: 28px;
+      height: 25px;
+    }
+    .core {
+      width: 10px;
+      height: 10px;
+      border-width: 1px;
+      font-size: 8px;
+    }
+  }
+
+  .node-preview-palette {
+    margin: 1vh 1vw;
+    .node-preview-name {
+      font-size: 10px;
+      line-height: 1px;
+    }
+  }
+
+  .node-actual[data-category="electronic"] {
+    .node-body{
+      position: relative;
+      height: 62px;
+      width: 62px;
+      border-radius: 8px;
+      background-color: #f4f4f4;
+      box-shadow: 10px 10px 2px 0 rgba(244, 176, 33, 0.03), 6px 6px 3px 0 rgba(52, 37, 14, 0.16), 1px 1px 3px 0 rgba(32, 21, 8, 0.5), inset 1px 1px 2px 0 rgba(255, 255, 255, 0.5);
+      border: solid 2px #c5c5c5;
+    }
+  }
+
+  .editer-main{
+    .sub-node-shelf{
+      width: 60px;
+      .node-preview{
+        width: 40px;
+        height: 40px;
+        margin: 10px 10px 0;
+        .node-preview-name{
+          line-height: 1.2;
+          font-size: 10px;
+        }
+      }
+    }
+    .sub-palette-fake-node{
+      .node-preview-icon{
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+  }
+
+  .node-actual.node-type-SPEAKERRECOGNIZE,
+  .node-actual.node-type-EMOTION_TEST,
+  .node-actual.node-type-OCR,
+  .node-actual.node-type-PLAYNOTES,
+  .node-actual.node-type-VOISERECOGNITION,
+  .node-actual.node-type-MUSICNOTE{
+    .node-port-outputs{
+      .core{
+        .node-port-value{
+          width: 6px !important;
+          height: 6px !important;
+          img{
+            width: inherit !important;
+            height: inherit !important;
+          }
+        }
+      }
+    }
+  }
+
+  .tab-mask {
+    span {
+      font-size: 10px;
+      height: 10px;
+    }
+  }
+
+  .node-actual.node-type-TEXTTOSPEECH,
+  .node-actual.node-type-OCR,
+  .node-actual.node-type-EMOTION_TEST,
+  .node-actual.node-type-SPEAKERRECOGNIZE {
+    &.plaint-wrap{
+      .plaint{
+        width: 10px;
+      }
+    }
+  }
+
+}

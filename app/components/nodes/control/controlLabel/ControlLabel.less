@@ -1,0 +1,93 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+
+.node-preview.node-type-LABEL {
+  .node-preview-title {
+    position: absolute;
+    .center();
+  }
+}
+
+.node-actual.node-type-LABEL {
+  .node-body {
+    width: 96px;
+    height: 96px;
+    border-radius: 8px;
+	  background-color: @node-control;
+	  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+	  border: solid 1px #3a65ab;
+    position: relative;
+    .editer-gear{
+      display: block;
+      width: 20px;
+      height: 20px;
+      float: right;
+    }
+    .node-actual-title {
+      width: 51px;
+      height: 17px;
+      margin: 16px auto 13px auto;
+      text-align: center;
+      font-size: 12px;
+      color: #ffffff;
+    }
+    .node-actual-content {
+      width: 65px;
+	  height: 36px;
+      margin: auto;
+      font-size: 24px;
+      font-weight: 500;
+      text-align: center;
+	  color: #ffffff;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-control;
+    }
+  }
+  .node-port-outputs{
+    .core{
+      background-color: @node-control;
+      .round();
+    }
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-control;
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-LABEL{
+    .node-body{
+      width: 60px;
+      height: 60px;
+      .node-actual-title{
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        margin: 0;
+        font-size: 8px;
+      }
+      .node-actual-content{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        font-size: 16px;
+      }
+      .editer-gear {
+        -webkit-transform: scale(0.625);
+        transform: scale(0.625);
+      }
+    }
+  }
+}

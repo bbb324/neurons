@@ -1,0 +1,41 @@
+@import '../../../nodeColor';
+@import '../../../nodeShape';
+.node-actual.node-type-MERGETEXT {
+  .node-body {
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 2px solid @node-mergeText-borderColor;
+    .merge-text{
+      width: 60px;
+      height: 14px;
+      opacity: 0.8;
+      font-size: 10px;
+      text-align: center;
+      color: #ffffff;   
+      position: relative;
+      top: 16px;      
+    }
+    .text-icon{
+      width: 31px;
+      height: 21px;
+      margin: 0 auto;
+      position: relative;
+      top: 28px;
+    }    
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-mergeText;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-mergeText;
+    }
+  }
+  .node-port-outputs {
+    .core {
+      .node-output-port-stying-object-style(@node-mergeText);
+    }
+  }
+}

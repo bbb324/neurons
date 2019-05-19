@@ -1,0 +1,69 @@
+@import '../../../nodeColor';
+@import '../../../nodeShape';
+
+.node-actual.node-type-IMAGE {
+   .title{
+    display: none;
+  }
+  .node-body {
+    background: @node-image;
+    border: 2px solid @node-color-borderColor;
+    width: 88px;
+    height: 88px;
+    .led-image {
+      font-size: 0;
+      margin: 2px auto;
+      display: block;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      line-height: 0;
+      .led-image-cell {
+        display: inline-block;
+        margin: 0 1px 1px 0;
+        background-color: #000;
+        border-radius: 1px;
+      }
+    }
+
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-image;
+    }
+  }
+  .node-config {
+    width: 200px;
+    height: 152px;
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-image;
+    }
+  }
+  .node-port-outputs {
+    .core {
+      .node-output-port-stying-object-style(@node-image);
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-IMAGE{
+    transform: scale(0.64) !important;
+    .node-port-inputs .core{
+      width: 16px !important;
+      height: 16px !important;
+    }
+    .node-port-output .core{
+      width: 16px !important;
+      height: 16px !important;
+      .node-port-value{
+        width: 10px !important;
+        height: 10px !important;
+      }
+    }
+
+  }
+}

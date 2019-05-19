@@ -1,0 +1,28 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-actual.node-type-SNAPSHOT {
+  .node-body {
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    .node-actual-body {
+      font-size: 24px;
+      width: 70px;
+      height: 40px;
+    }
+  }
+  .node-port-input .core {
+    border-color: @node-camera-snapShot;
+  }
+
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-camera-snapShot;
+    }
+  }
+
+  .node-port-outputs{
+    .core{
+      .node-output-port-stying-object-style(@node-camera-snapShot);
+    }
+  }
+}

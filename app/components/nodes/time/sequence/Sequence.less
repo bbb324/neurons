@@ -1,0 +1,125 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+
+.node-actual.node-type-SEQUENCE {
+  background: @node-sequence;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  height: 178px;
+  .node-body{
+    border: solid 1px @node-sequence-borderColor;
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    color: #ffffff;
+    text-align: center;
+    .node-actual-body {
+      height: inherit;
+      .seq-node {
+        font-size: 16px;
+        width: inherit;
+        height: 4.6875vh;
+        margin:0 auto;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #dd770c;
+        position: relative;
+        overflow: hidden;
+        .txt {
+          width: 100%;
+          height: 100%;
+          .flex-lr-tb-center;
+          transition: width 0.2s ease;
+          position: absolute;
+          right: 0;
+          .single-line-ellipsis;
+        }
+      }
+      .seq-node:first-child {
+        .delete-btn {
+          border-top-left-radius: 8px;
+          height: 4.428vh;
+          bottom: 0;
+        }
+        .txt {
+          height: 4.428vh;
+          border-top-right-radius: 8px;
+          bottom: 0;
+        }
+      }
+      .seq-node:nth-child(6) {
+        height: 4.428vh;
+        border-bottom: none;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+      .seq-add, .seq-subtract {
+        width: 50%;
+        height: 4.6875vh;
+        background: #d36618;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: scale-down;
+        }
+      }
+      .seq-add {
+        border-bottom-right-radius: 8px;
+      }
+      .seq-subtract {
+        border-bottom-left-radius: 8px;
+        left: 0;
+      }
+    }
+  }
+  .node-tools{
+    .tab-control {
+      .tab-control-circle{
+        background-color: @node-sequence;
+      }
+    }
+
+  }
+  .node-port-inputs {
+    top: 2.5vh;
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    height: 100%;
+    .node-port-output {
+      height: 4.688vh;
+    }
+    .core {
+      .node-output-port-boolean-style(@node-sequence);
+      .node-port-value {
+        .centerY;
+      }
+    }
+    .show{
+      margin-left: 0;
+    }
+  }
+  .node-port-inputs{
+    .core {
+      border-color: @node-sequence-borderColor;
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-SEQUENCE {
+    .node-body {
+      .node-actual-body {
+        .seq-node {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+}

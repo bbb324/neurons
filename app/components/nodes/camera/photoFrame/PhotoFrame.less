@@ -1,0 +1,37 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+
+.node-actual.node-type-PHOTO_FRAME {
+  .node-body {
+    width: 14.585vh;
+    height: 11.068vh;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    img {
+      width: 95.54%;
+      height: 94.12%;
+      border-radius: 4px;
+      display: block;
+      .center();
+    }
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-color;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-color !important;
+    }
+  }
+  .node-port-outputs {
+    .core{
+      background-color: @node-color;
+      .round();
+    }
+  }
+}
+

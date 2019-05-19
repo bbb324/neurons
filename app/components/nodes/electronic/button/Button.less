@@ -1,0 +1,30 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+
+.node-actual.node-type-BUTTON {
+  .node-body{
+    border: 3px solid @node-button;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-button;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      background-color: @node-button;
+      .round();
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-BUTTON {
+    .node-body {
+      border-width: 2px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+node_modules/
+*.log
+bundle.js
+workspace.xml
+.DS_Store
+jsLibraryMappings.xml
+.idea/
+.vscode/
+misc.xml
+watcherTasks.xml

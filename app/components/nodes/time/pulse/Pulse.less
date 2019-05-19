@@ -1,0 +1,51 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+
+.node-preview.node-type-PULSE {
+
+}
+
+.node-actual.node-type-PULSE {
+  .node-body{
+    background: @node-pulse;
+    border: solid 1px @node-pulse-borderColor;
+    .node-actual-icon{
+      width: 40px;
+      height: 25.3px;
+      margin: 0 auto;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-background-size: 100% 100%;
+      background-size: 100% 100%;
+    }
+  }
+  .node-config {
+    font-size: 14px;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-pulse;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-pulse);
+    }
+    .show{
+      margin-left: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;  
+    }
+  }    
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-PULSE .node-body .node-actual-icon {
+    width: 41.5%;
+    height: 26.3%;
+  }
+}

@@ -1,0 +1,267 @@
+@import '../nodes/nodeShape';
+.ReactModal__Content.ReactModal__Content--after-open.image-dialog {
+  height: 637px;
+  width: 650px;
+  .center;
+  background: #2B323E;
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
+  padding: 0;
+  outline: none;
+  .dialog-color-list{
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 26px;
+    ul{
+      width: 504px;
+      margin: 0 auto;
+    }
+    .colorBlock{
+      display: inline-flex;
+      width: 40px;
+      height: 40px;
+      margin: 0 9px;
+      border-radius: 100%;
+      align-items: center;
+      vertical-align: middle;
+    }
+    .colorBlock:nth-child(2){
+      margin: 0 9px 0 0;
+    }
+    .right{
+      float: right;
+      margin: 0 0 0 9px;
+      text-align: center;
+      font-size: 21px;
+      .flex-lr-tb-center;
+    }
+    .right:before {
+
+    }
+    .icon-selected:before{
+      font-size: 22px;
+      content: "\e939";
+      margin: 0 auto;
+      border-radius: 100%;
+    }
+    .icon-eraser:before{
+      content: "\e924" !important;
+    }
+  }
+  .image-dialog-editer {
+    padding: 26px 55px 0 55px;
+    & > div {
+      display: inline-block;
+    }
+    .image-dialog-image {
+      width: 366px;
+    }
+    .image-dialog-frames {
+      width: 70px;
+      height: 360px;
+      position: relative;
+      vertical-align: top;
+      background: #212731;
+      border-radius: 4px;
+      text-align: center;
+      padding: 5px;
+      .image-dialog-frames-title {
+        height: 27px;
+        font-size: 16px;
+        color: #586A87;
+        border-bottom: 1px solid #282F3A;
+        margin-bottom: 4px;
+      }
+      .image-dialog-add-frame {
+        width: 50px;
+        height: 50px;
+        display: block;
+        border: 2px solid #3A4352;
+        border-radius: 4px;
+        color: #3A4352;
+        line-height: 50px;
+        font-size: 18px;
+        text-align: center;
+        color: #5B687B;
+        margin: 4px auto;
+        i {
+          display: block;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          margin: 0 auto;
+        }
+      }
+      .image-dialog-play {
+        background: #687893;
+        border-radius: 19px;
+        display: block;
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        text-align: center;
+        font-size: 15px;
+        color: #212731;
+        position: absolute;
+        bottom: 10px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        &:active {
+          background: #9CAFCE;
+        }
+      }
+      .disabled {
+        display: none;
+      }
+
+      .image-dialog-frame-delete {
+        position: absolute;
+        left: -25px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-top: 16px;
+        .frame-delete {
+          margin: 30px 0;
+          display: block;
+          color: #9CAFCE;
+          font-size: 14px;
+          &:active {
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+    .image-dialog-actions {
+      vertical-align: top;
+      width: 60px;
+      height: 360px;
+      margin-left: 4px;
+      position: relative;
+      .image-dialog-undo, .image-dialog-redo, .image-dialog-empty, .image-dialog-examples {
+        &:active {
+          color: #FFFFFF;
+          background: #3A4352;
+        }
+        border: 2px solid #3A4352;
+        border-radius: 6px;
+        height: 60px;
+        width: 60px;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 24px;
+        color: #9CAFCE;
+        text-align: center;
+        .flex-lr-tb-center;
+      }
+      .image-dialog-examples {
+        &:active {
+          color: #49C3FF !important;
+          border: 2px solid #9CAFCE;
+        }
+        position: absolute;
+        margin-bottom: 0;
+        top: 300px;
+      }
+      .image-dialog-examples.open {
+        color: #49C3FF !important;
+        border: 2px solid #3B4659;
+        height: 67px;
+        border-bottom: none;
+        background: #2B323E;
+        border-radius: 6px 6px 0 0;
+      }
+      .disabled {
+        color: #666;
+      }
+    }
+  }
+
+  .image-dialog-example-images {
+    display: block;
+    padding: 18px 27px;
+    margin: 0 55px 22px;
+    .led-image {
+      display: inline-block;
+      margin: 0 13px;
+    }
+    border: 2px solid #3B4659;
+    border-radius: 6px 0 6px 6px;
+  }
+
+  .led-image {
+    font-size: 0;
+    box-sizing: content-box;
+    margin: 2px auto;
+    position: relative;
+    line-height: 0;
+  }
+  .highlight{
+    border: 1px solid #687893;
+  }
+  .led-image-cell {
+    display: inline-block;
+    margin: 0 1px 1px 0;
+    background-color: #000;
+    border-radius: 1px;
+  }
+  .title, .color-dialog-footer {
+    margin-top: 26px;
+    height: 70px;
+    text-align: center;
+    color: #BFCEE5;
+    font-size: 28px;
+  }
+  .image-dialog-body {
+    transition: transform 0.5s ease;
+    background-color: #1D222A;
+    text-align: center;
+    -webkit-border-bottom-left-radius: 16px;
+    -webkit-border-bottom-right-radius: 16px;
+
+    &.spring {
+      transform: translateY(-100px);
+      -webkit-transform: translateY(-100px);
+      -webkit-border-radius: 16px;
+    }
+  }
+  .color-dialog-footer {
+    .color-dialog-btn {
+      background: #353C48;
+      color: #9CAFCE;
+      float: right;
+      height: 77px;
+      font-size: 28px;
+      padding: 0 20px;
+      text-align: center;
+      width: 50%;
+      .flex-lr-tb-center;
+      i {
+        float: left;
+        line-height: 46px;
+      }
+    }
+    .color-dialog-cancel {
+      border-bottom-left-radius: 16px;
+    }
+    .color-dialog-confirm {
+      border-bottom-right-radius: 16px;
+      border-left: 1px solid #2B323E;
+      color: #13B7FF;
+    }
+    .color-dialog-cancel:active{
+      color: rgba(156, 175, 206, 0.6);
+    }
+    .color-dialog-confirm:active{
+      color: rgba(19, 183, 255, 0.6);
+    }
+  }
+}
+@media screen and (max-height: 600px) {
+  .image-dialog {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+}

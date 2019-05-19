@@ -1,0 +1,22 @@
+@import '../../../nodeColor';
+@import '../../../nodeShape';
+
+.node-actual.node-type-SAVERECORD {
+  .node-body {
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-sound-record;
+    }
+  }
+  .node-port-outputs{
+    .core{
+      .node-output-port-stying-object-style(@node-sound-record);
+    }
+  }
+  .node-port-input .core {
+    border-color: @node-sound-record;
+  }
+}

@@ -1,0 +1,91 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+.node-preview.node-type-FILTER {
+  .node-preview-icon{
+    background-color: @node-filter;
+    border: solid 1px @node-filter-borderColor;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 100%;
+    width: 64px;
+    .flex-lr-tb-center;
+  }
+  .node-preview-name {
+    margin-top: 9px;
+  }
+}
+
+.node-actual.node-type-FILTER {
+  .node-body{
+    background-color: @node-filter;
+    border: solid 1px @node-filter-borderColor;
+    .from, .to {
+      width: 45.35%;
+      height: 37px;
+      display: block;
+      background-color: #ffffff;
+      text-align: center;
+      color: @node-filter-borderColor;
+      font-size: 20px;
+      font-weight: 500;
+      font-family: dinpro;
+      position: relative;
+
+      margin: 0 auto;
+      &:extend(.single-line-ellipsis);
+    }
+    .to{
+      line-height: 2.6;
+      border-top-left-radius: 50% 24%;
+      border-top-right-radius: 50% 24%;
+    }
+    .arrow {
+      width: 85%;
+      height: 24%;
+      object-fit: contain;
+      opacity: 0.96;
+      display: block;
+    } 
+    .from{
+      line-height: 1.6;
+      border-bottom-left-radius: 50% 24%;
+      border-bottom-right-radius: 50% 24%;
+    }
+  }
+ .node-config {
+    font-size: 14px;
+  } 
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-filter;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-filter;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core {
+      .node-output-port-number-style(@node-filter);
+    }
+    .show{
+      margin-left: 0;
+    }
+  } 
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-FILTER .node-body .from, .node-actual.node-type-FILTER .node-body .to {
+    height: 24px;
+    font-size: 12px;
+  }
+
+  .node-preview.node-type-FILTER .node-preview-icon {
+    font-size: 12px;
+  }
+}
+

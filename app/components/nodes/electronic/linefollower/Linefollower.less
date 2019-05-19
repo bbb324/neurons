@@ -1,0 +1,31 @@
+@import '../../nodeColor';
+.node-actual.node-type-LINEFOLLOWER {
+  .node-body{
+    height: 101px;
+    width: 165px;
+    border: 3px solid @node-lineFollow;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-lineFollow;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      background-color: @node-lineFollow;
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-LINEFOLLOWER {
+    .node-body {
+      height: 60px;
+      width: 96px;
+      border-width: 2px;
+    }
+  }
+}

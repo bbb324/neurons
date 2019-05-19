@@ -1,0 +1,27 @@
+@import '../../nodeColor';
+
+.node-actual.node-type-LED {
+  .node-body{
+    border: 3px solid @node-led;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-led;
+    }
+  }
+  .node-port-inputs {
+    .core {
+      border-color: @node-led;
+    }
+  }
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-LED {
+    .node-body {
+      border-width: 2px;
+    }
+  }
+}

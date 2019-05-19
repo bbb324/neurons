@@ -1,0 +1,46 @@
+@import '../../nodeColor';
+@import '../../nodeShape';
+
+.node-actual.node-type-ACCELEROMETER_GYRO {
+  .node-body{
+    border: 3px solid @node-gyroSensor;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .node-tools{
+    .tab-control-circle{
+      background-color: @node-gyroSensor;
+    }
+  }
+  .node-port-outputs{
+    margin-left: 10px;
+    .core{
+      .node-port-value {
+        width: 28px !important;
+      }
+      .node-output-port-number-style(@node-gyroSensor);
+    }
+    .show{
+      .node-port-label {
+        float: left;
+        margin-left: 2px;
+      }
+    }
+    .round {
+      width: 16px;
+      height: 16px;
+    }
+  }  
+}
+
+@media (max-device-width: 767px) and (orientation: landscape) {
+  .node-actual.node-type-ACCELEROMETER_GYRO {
+    .node-body {
+      border-width: 2px;
+    }
+    .node-port-outputs .core .node-port-label {
+      height: 90%;
+      line-height: 1.3;
+    }
+  }
+}

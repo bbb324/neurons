@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="wifi-version" content="2.9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Makeblock Neurons</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/icon.css">
+</head>
+<body>
+<div id="app-container"></div>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script src="js/html2canvas.js"></script>
+<script src="js/neurons_engine.js"></script>
+<script src="js/qrcode.js"></script>
+<script>
+    (function () {
+        // runtime checking.
+        window._runtime = 'browser';
+        if (window.process) {
+            window._runtime = 'electron';
+            // if we are in electron, prepare for electron env
+            window.electron = require('electron');
+        } else if (window.cordova) {
+            window._runtime = 'cordova';
+        }
+        // dynamic script loading
+        function loadScript(src) {
+            var appScript = document.createElement("script");
+            appScript.type = "text/javascript";
+            appScript.src = src;
+            document.body.appendChild(appScript);
+        }   
+
+        if (window._runtime == 'cordova') {
+            document.addEventListener('deviceready', function () {
+                loadScript('bundle.js');
+                StatusBar.hide();
+                //ga
+                window.ga.startTrackerWithId('UA-68765072-3', 30);
+            });
+        } else {
+            loadScript('bundle.js');
+        }
+    })();
+</script>
+</body>
+</html>
